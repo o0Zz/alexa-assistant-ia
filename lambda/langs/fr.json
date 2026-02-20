@@ -1,0 +1,29 @@
+{
+  "missing_token_error": "COPILOT_API_TOKEN manquant",
+  "launch_activated": "Assistant IA activé",
+  "suggestions_intro": "Vous pouvez demander : ",
+  "suggestions_closer": ". <break time=\"0.5s\"/> Que voulez-vous savoir ?",
+  "reprompt_default": "Vous pouvez me poser une autre question ou dire stop pour terminer la conversation.",
+  "reprompt_with_suggestions": "Vous pouvez me poser une autre question, dire 'suivant' pour entendre plus de suggestions, ou dire stop pour terminer la conversation.",
+  "generic_error": "Désolé, j'ai eu un problème pour faire ce que vous avez demandé. Veuillez réessayer.",
+  "stop_message": "Sortie du mode Assistant IA",
+  "followup_system_prompt": "Tu es un assistant utile qui suggère de courtes questions de suivi.",
+  "followup_user_prompt": "À partir de la conversation, suggère 2 questions de suivi très courtes (max 4 mots chacune). Fais-les directes et simples. Retourne UNIQUEMENT les questions séparées par '|'. Exemple : Quelle capitale ?|Quelle taille ?",
+  "followup_questions_prompt": "Questions de suivi (séparées par |) :",
+  "previous_question_prefix": "Question précédente : ",
+  "current_question_prefix": "Question actuelle : ",
+  "fallback_followup_1": "Dis-m'en plus",
+  "fallback_followup_2": "Donne-moi un exemple",
+  "followup_patterns": [
+    "^(quoi|comment|pourquoi|quand|où|ou|qui|quel|quelle|quels|quelles)\\s+(sur|est|sont|était|etaient|étaient|font|peux|peut|pourrais|pourrait|devrais|devrait|vas|va)\\s",
+    "^(et|mais|donc|alors|aussi)\\s",
+    "^(peux|peut|pourrais|pourrait|devrais|devrait|vas|va)\\s+(tu|vous|il|elle|ils|elles|on)\\s",
+    "^(est|sont|était|etaient|étaient|font)\\s+(ça|cela|ceci|ça|ils|elles|ceux|celles)\\s",
+    "^(dis-m'en plus|développe|developpe|explique davantage)\\s*",
+    "^(pourquoi|comment)\\?*$"
+  ],
+  "response_system_prompt": "Tu es un assistant utile. Réponds en 50 mots ou moins.",
+  "followup_system_prompt_suffix": " Ceci est une question de suivi de la conversation précédente. Garde le contexte sans répéter les informations déjà fournies.",
+  "response_error_prefix": "Erreur lors de la génération de la réponse : ",
+  "clear_context_message": "J'ai effacé l'historique de notre conversation. De quoi voulez-vous parler ?"
+}
