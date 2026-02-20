@@ -1,4 +1,4 @@
-# Alexa Assistant IA
+# Alexa AI Assistant
 
 Alexa custom skill that routes user questions to a selectable LLM provider (GitHub Copilot, ChatGPT, Claude, or MistralAI) and returns an answer.
 
@@ -45,7 +45,7 @@ Language currently available (In `lambda/langs/`):
  Login to https://developer.amazon.com/alexa/console/ask
 
 ### 2. 
-Click on "Create Skill" and name the skill "IA Assistant". Choose the primary locale according to your language.
+Click on "Create Skill" and name the skill "AI Assistant". Choose the primary locale according to your language.
 ![name your skill](images/name_your_skill.png)
 
 ### 3. 
@@ -61,7 +61,7 @@ Choose "Alexa-hosted (Python)" for the backend resources.
 ![hosting services](images/hosting_services.png)
 
 ### 5. 
-Click on "Import Skill", paste the link of this repository (https://github.com/o0zz/alexa-assistant-ia.git) and click on "Import".
+Click on "Import Skill", paste the link of this repository (https://github.com/o0zz/alexa-assistant-ai.git) and click on "Import".
 ![template](images/import_git_skill.png)
 
 ### 6. 
@@ -94,7 +94,7 @@ Save and deploy. Go to "Test" section and enable "Skill testing" in "Development
 ![development_enabled](images/development_enabled.png)
 
 ### 10. 
-You are now ready to use your Alexa in IA Assistant mode. You should see results like this:
+You are now ready to use your Alexa in AI Assistant mode. You should see results like this:
 
 ![test](images/test.png)
 

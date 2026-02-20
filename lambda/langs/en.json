@@ -1,11 +1,11 @@
 {
-  "launch_activated": "IA Assistant activated",
+  "launch_activated": "AI Assistant activated",
   "suggestions_intro": "You could ask: ",
   "suggestions_closer": ". <break time=\"0.5s\"/> What would you like to know?",
   "reprompt_default": "You can ask me another question or say stop to end the conversation.",
   "reprompt_with_suggestions": "You can ask me another question, say 'next' to hear more suggestions, or say stop to end the conversation.",
   "generic_error": "Sorry, I had trouble doing what you asked. Please try again.",
-  "stop_message": "Leaving Chat G.P.T. mode",
+  "stop_message": "Leaving AI Assistant mode",
   "followup_system_prompt": "You are a helpful assistant that suggests short follow-up questions.",
   "followup_user_prompt": "Based on the conversation, suggest 2 very short follow-up questions (max 4 words each). Make them direct and simple. Return ONLY the questions separated by '|'. Example: What's the capital?|How big is it?",
   "followup_questions_prompt": "Follow-up questions (separated by |):",

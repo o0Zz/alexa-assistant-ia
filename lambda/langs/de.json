@@ -5,7 +5,7 @@
   "reprompt_default": "Du kannst mir eine weitere Frage stellen oder stop sagen, um das Gespräch zu beenden.",
   "reprompt_with_suggestions": "Du kannst mir eine weitere Frage stellen, 'weiter' sagen, um mehr Vorschläge zu hören, oder stop sagen, um das Gespräch zu beenden.",
   "generic_error": "Entschuldigung, ich hatte ein Problem mit deiner Anfrage. Bitte versuche es erneut.",
-  "stop_message": "Chat-G.P.T.-Modus wird beendet",
+  "stop_message": "AI-Assistent Modus wird beendet",
   "followup_system_prompt": "Du bist ein hilfreicher Assistent, der kurze Folgefragen vorschlägt.",
   "followup_user_prompt": "Schlage basierend auf dem Gespräch 2 sehr kurze Folgefragen vor (max. 4 Wörter pro Frage). Formuliere sie direkt und einfach. Gib NUR die Fragen zurück, getrennt durch '|'. Beispiel: Was ist die Hauptstadt?|Wie groß ist es?",
   "followup_questions_prompt": "Folgefragen (durch | getrennt):",

@@ -5,7 +5,7 @@
   "reprompt_default": "Puoi farmi un'altra domanda oppure dire stop per terminare la conversazione.",
   "reprompt_with_suggestions": "Puoi farmi un'altra domanda, dire 'avanti' per ascoltare altri suggerimenti, oppure dire stop per terminare la conversazione.",
   "generic_error": "Mi dispiace, ho avuto un problema con la tua richiesta. Riprova.",
-  "stop_message": "Uscita dalla modalità Chat G.P.T.",
+  "stop_message": "Uscita dalla modalità Assistente IA",
   "followup_system_prompt": "Sei un assistente utile che suggerisce brevi domande di follow-up.",
   "followup_user_prompt": "In base alla conversazione, suggerisci 2 domande di follow-up molto brevi (max 4 parole ciascuna). Devono essere dirette e semplici. Restituisci SOLO le domande separate da '|'. Esempio: Qual è la capitale?|Quanto è grande?",
   "followup_questions_prompt": "Domande di follow-up (separate da |):",
