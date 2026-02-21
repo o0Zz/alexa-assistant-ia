@@ -25,5 +25,18 @@
   "response_system_prompt": "Tu es un assistant utile. Réponds en 50 mots ou moins.",
   "followup_system_prompt_suffix": " Ceci est une question de suivi de la conversation précédente. Garde le contexte sans répéter les informations déjà fournies.",
   "response_error_prefix": "Erreur lors de la génération de la réponse : ",
-  "clear_context_message": "J'ai effacé l'historique de notre conversation. De quoi voulez-vous parler ?"
+  "clear_context_message": "J'ai effacé l'historique de notre conversation. De quoi voulez-vous parler ?",
+  "intent_prefixes": {
+    "AIWhatIntent": "qu'est-ce que",
+    "AIWhoIntent": "qui",
+    "AIWhichIntent": "quel",
+    "AIHowIntent": "comment",
+    "AIExplainIntent": "explique",
+    "AITellMeAboutIntent": "parle-moi de",
+    "AIDefineIntent": "définis",
+    "AIWhenIntent": "quand",
+    "AIWhereIntent": "où",
+    "AIWhyIntent": "pourquoi",
+    "AICompareIntent": "compare"
+  }
 }

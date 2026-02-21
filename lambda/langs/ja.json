@@ -24,5 +24,18 @@
   "response_system_prompt": "あなたは役に立つアシスタントです。50語以内で答えてください。",
   "followup_system_prompt_suffix": " これは前の会話に対するフォローアップ質問です。すでに提供した情報を繰り返さず、文脈を維持してください。",
   "response_error_prefix": "回答生成エラー: ",
-  "clear_context_message": "会話履歴を消去しました。何について話しますか？"
+  "clear_context_message": "会話履歴を消去しました。何について話しますか？",
+  "intent_prefixes": {
+    "AIWhatIntent": "何",
+    "AIWhoIntent": "誰",
+    "AIWhichIntent": "どれ",
+    "AIHowIntent": "どう",
+    "AIExplainIntent": "説明して",
+    "AITellMeAboutIntent": "について教えて",
+    "AIDefineIntent": "定義して",
+    "AIWhenIntent": "いつ",
+    "AIWhereIntent": "どこ",
+    "AIWhyIntent": "なぜ",
+    "AICompareIntent": "比較して"
+  }
 }

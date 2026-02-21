@@ -24,5 +24,18 @@
   "response_system_prompt": "Eres un asistente útil. Responde en 50 palabras o menos.",
   "followup_system_prompt_suffix": " Esta es una pregunta de seguimiento de la conversación anterior. Mantén el contexto sin repetir información ya proporcionada.",
   "response_error_prefix": "Error al generar la respuesta: ",
-  "clear_context_message": "He borrado el historial de nuestra conversación. ¿De qué te gustaría hablar?"
+  "clear_context_message": "He borrado el historial de nuestra conversación. ¿De qué te gustaría hablar?",
+  "intent_prefixes": {
+    "AIWhatIntent": "qué",
+    "AIWhoIntent": "quién",
+    "AIWhichIntent": "cuál",
+    "AIHowIntent": "cómo",
+    "AIExplainIntent": "explica",
+    "AITellMeAboutIntent": "háblame de",
+    "AIDefineIntent": "define",
+    "AIWhenIntent": "cuándo",
+    "AIWhereIntent": "dónde",
+    "AIWhyIntent": "por qué",
+    "AICompareIntent": "compara"
+  }
 }

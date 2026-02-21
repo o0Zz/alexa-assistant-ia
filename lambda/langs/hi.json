@@ -24,5 +24,18 @@
   "response_system_prompt": "आप एक सहायक असिस्टेंट हैं। 50 शब्दों या उससे कम में उत्तर दें।",
   "followup_system_prompt_suffix": " यह पिछले संवाद का फॉलो-अप प्रश्न है। पहले दी गई जानकारी दोहराए बिना संदर्भ बनाए रखें।",
   "response_error_prefix": "उत्तर बनाने में त्रुटि: ",
-  "clear_context_message": "मैंने हमारी बातचीत का इतिहास साफ कर दिया है। आप किस बारे में बात करना चाहते हैं?"
+  "clear_context_message": "मैंने हमारी बातचीत का इतिहास साफ कर दिया है। आप किस बारे में बात करना चाहते हैं?",
+  "intent_prefixes": {
+    "AIWhatIntent": "क्या",
+    "AIWhoIntent": "कौन",
+    "AIWhichIntent": "कौन सा",
+    "AIHowIntent": "कैसे",
+    "AIExplainIntent": "समझाओ",
+    "AITellMeAboutIntent": "के बारे में बताओ",
+    "AIDefineIntent": "परिभाषित करो",
+    "AIWhenIntent": "कब",
+    "AIWhereIntent": "कहाँ",
+    "AIWhyIntent": "क्यों",
+    "AICompareIntent": "तुलना करो"
+  }
 }

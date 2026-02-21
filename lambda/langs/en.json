@@ -24,5 +24,18 @@
   "response_system_prompt": "You are a helpful assistant. Answer in 50 words or less.",
   "followup_system_prompt_suffix": " This is a follow-up question to the previous conversation. Maintain context without repeating information already provided.",
   "response_error_prefix": "Error generating response: ",
-  "clear_context_message": "I've cleared our conversation history. What would you like to talk about?"
+  "clear_context_message": "I've cleared our conversation history. What would you like to talk about?",
+  "intent_prefixes": {
+    "AIWhatIntent": "what",
+    "AIWhoIntent": "who",
+    "AIWhichIntent": "which",
+    "AIHowIntent": "how",
+    "AIExplainIntent": "explain",
+    "AITellMeAboutIntent": "tell me about",
+    "AIDefineIntent": "define",
+    "AIWhenIntent": "when",
+    "AIWhereIntent": "where",
+    "AIWhyIntent": "why",
+    "AICompareIntent": "compare"
+  }
 }

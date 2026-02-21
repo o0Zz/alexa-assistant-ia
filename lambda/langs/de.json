@@ -24,5 +24,18 @@
   "response_system_prompt": "Du bist ein hilfreicher Assistent. Antworte in 50 Wörtern oder weniger.",
   "followup_system_prompt_suffix": " Dies ist eine Folgefrage zur vorherigen Unterhaltung. Behalte den Kontext bei, ohne bereits gegebene Informationen zu wiederholen.",
   "response_error_prefix": "Fehler bei der Antwortgenerierung: ",
-  "clear_context_message": "Ich habe unseren Gesprächsverlauf gelöscht. Worüber möchtest du sprechen?"
+  "clear_context_message": "Ich habe unseren Gesprächsverlauf gelöscht. Worüber möchtest du sprechen?",
+  "intent_prefixes": {
+    "AIWhatIntent": "was",
+    "AIWhoIntent": "wer",
+    "AIWhichIntent": "welche",
+    "AIHowIntent": "wie",
+    "AIExplainIntent": "erkläre",
+    "AITellMeAboutIntent": "erzähl mir von",
+    "AIDefineIntent": "definiere",
+    "AIWhenIntent": "wann",
+    "AIWhereIntent": "wo",
+    "AIWhyIntent": "warum",
+    "AICompareIntent": "vergleiche"
+  }
 }

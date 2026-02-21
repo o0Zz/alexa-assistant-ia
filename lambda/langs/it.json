@@ -24,5 +24,18 @@
   "response_system_prompt": "Sei un assistente utile. Rispondi in 50 parole o meno.",
   "followup_system_prompt_suffix": " Questa è una domanda di follow-up alla conversazione precedente. Mantieni il contesto senza ripetere informazioni già fornite.",
   "response_error_prefix": "Errore durante la generazione della risposta: ",
-  "clear_context_message": "Ho cancellato la cronologia della nostra conversazione. Di cosa vuoi parlare?"
+  "clear_context_message": "Ho cancellato la cronologia della nostra conversazione. Di cosa vuoi parlare?",
+  "intent_prefixes": {
+    "AIWhatIntent": "cosa",
+    "AIWhoIntent": "chi",
+    "AIWhichIntent": "quale",
+    "AIHowIntent": "come",
+    "AIExplainIntent": "spiega",
+    "AITellMeAboutIntent": "parlami di",
+    "AIDefineIntent": "definisci",
+    "AIWhenIntent": "quando",
+    "AIWhereIntent": "dove",
+    "AIWhyIntent": "perché",
+    "AICompareIntent": "confronta"
+  }
 }

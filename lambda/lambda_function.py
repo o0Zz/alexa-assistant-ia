@@ -58,12 +58,51 @@ class AIQueryIntentHandler(AbstractRequestHandler):
     """Handler for AI Query Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("AIQueryIntent")(handler_input)
+        intent_name = ""
+        try:
+            intent_name = handler_input.request_envelope.request.intent.name
+        except Exception:
+            return False
+
+        supported_intents = {
+            "AIQueryIntent",
+            "AIHowIntent",
+            "AIWhatIntent",
+            "AIWhoIntent",
+            "AIWhichIntent",
+            "AIExplainIntent",
+            "AITellMeAboutIntent",
+            "AIDefineIntent",
+            "AIWhenIntent",
+            "AIWhereIntent",
+            "AIWhyIntent",
+            "AICompareIntent",
+        }
+        return intent_name in supported_intents
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         texts = get_language_texts(handler_input)
-        query = handler_input.request_envelope.request.intent.slots["query"].value
+        intent = handler_input.request_envelope.request.intent
+        slots = intent.slots or {}
+        query_slot = slots.get("query")
+
+        query = (query_slot.value or "").strip() if query_slot else ""
+
+        prefix = texts["intent_prefixes"].get(intent.name)
+        if prefix and query and not query.lower().startswith(prefix):
+            query = f"{prefix} {query}"
+        elif prefix and not query:
+            query = prefix
+
+        if not query:
+            reprompt_text = texts["reprompt_default"]
+            return (
+                handler_input.response_builder
+                    .speak(reprompt_text)
+                    .ask(reprompt_text)
+                    .response
+            )
        
         session_attr = handler_input.attributes_manager.session_attributes
         if "chat_history" not in session_attr:
