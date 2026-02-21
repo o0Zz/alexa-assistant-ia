@@ -52,6 +52,7 @@ Language currently available (In `lambda/langs/`):
 
 ### 2. 
 Click on "Create Skill" and name the skill "AI Assistant". Choose the primary locale according to your language.
+
 ![name your skill](images/name_your_skill.png)
 
 ### 3. 
@@ -68,6 +69,7 @@ Choose "Alexa-hosted (Python)" for the backend resources.
 
 ### 5. 
 Click on "Import Skill", paste the link of this repository (https://github.com/o0zz/alexa-assistant-ai.git) and click on "Import".
+
 ![import skill](images/import_git_skill.png)
 
 ### 6. 
@@ -103,7 +105,7 @@ Go to "Test" section and enable "Skill testing" in "Development".
 ![development_enabled](images/development_enabled.png)
 
 ### 10. 
-You are now ready to use your Alexa in AI Assistant mode. You should see results like this:
+You are now ready to use your Alexa in AI Assistant mode.
 
 ## Cost notice
 
