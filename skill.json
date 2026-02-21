@@ -3,143 +3,158 @@
         "publishingInformation": {
             "locales": {
                 "en-US": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Multilingual AI assistant for Alexa",
+                    "description": "Ask questions with Neo Chat and get concise answers powered by configurable AI providers with optional follow-up suggestions.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, open neo chat",
+                        "Alexa, ask neo chat what is quantum computing"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chatbot"]
                 },
                 "en-GB": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Multilingual AI assistant for Alexa",
+                    "description": "Ask questions with Neo Chat and get concise answers powered by configurable AI providers with optional follow-up suggestions.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, open neo chat",
+                        "Alexa, ask neo chat who is Ada Lovelace"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chatbot"]
                 },
                 "en-CA": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Multilingual AI assistant for Alexa",
+                    "description": "Ask questions with Neo Chat and get concise answers powered by configurable AI providers with optional follow-up suggestions.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, open neo chat",
+                        "Alexa, ask neo chat explain machine learning"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chatbot"]
                 },
                 "en-IN": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Multilingual AI assistant for Alexa",
+                    "description": "Ask questions with Neo Chat and get concise answers powered by configurable AI providers with optional follow-up suggestions.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, open neo chat",
+                        "Alexa, ask neo chat what is photosynthesis"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chatbot"]
                 },
                 "en-AU": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Multilingual AI assistant for Alexa",
+                    "description": "Ask questions with Neo Chat and get concise answers powered by configurable AI providers with optional follow-up suggestions.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, open neo chat",
+                        "Alexa, ask neo chat what is blockchain"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chatbot"]
                 },
                 "es-ES": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Asistente de IA multilingüe para Alexa",
+                    "description": "Haz preguntas a Neo Chat y recibe respuestas breves con proveedores de IA configurables y sugerencias opcionales.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, abre neo chat",
+                        "Alexa, pregunta a neo chat qué es la inteligencia artificial"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "asistente", "chat"]
                 },
                 "es-MX": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Asistente de IA multilingüe para Alexa",
+                    "description": "Haz preguntas a Neo Chat y recibe respuestas breves con proveedores de IA configurables y sugerencias opcionales.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, abre neo chat",
+                        "Alexa, pregúntale a neo chat quién fue Marie Curie"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "asistente", "chat"]
                 },
                 "es-US": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa skill that uses AI models to generate responses",
+                    "name": "neo chat",
+                    "summary": "Asistente de IA multilingüe para Alexa",
+                    "description": "Haz preguntas a Neo Chat y recibe respuestas breves con proveedores de IA configurables y sugerencias opcionales.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, abre neo chat",
+                        "Alexa, pregunta a neo chat cómo funciona un motor"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "asistente", "chat"]
                 },
                 "fr-FR": {
-                    "name": "chat",
-                    "summary": "AI Assistant dans Alexa",
-                    "description": "Skill Alexa qui utilise des modèles d'IA pour générer des réponses",
+                    "name": "neo chat",
+                    "summary": "Assistant IA multilingue pour Alexa",
+                    "description": "Posez vos questions à Neo Chat et obtenez des réponses concises avec des fournisseurs IA configurables et des suggestions optionnelles.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, ouvre neo chat",
+                        "Alexa, demande à neo chat quel est l'âge de George Clooney"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "assistant", "chat"]
                 },
                 "fr-CA": {
-                    "name": "chat",
-                    "summary": "AI Assistant dans Alexa",
-                    "description": "Skill Alexa qui utilise des modèles d'IA pour générer des réponses",
+                    "name": "neo chat",
+                    "summary": "Assistant IA multilingue pour Alexa",
+                    "description": "Posez vos questions à Neo Chat et obtenez des réponses concises avec des fournisseurs IA configurables et des suggestions optionnelles.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, ouvre neo chat",
+                        "Alexa, demande à neo chat qui est Alan Turing"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "assistant", "chat"]
                 },
                 "ja-JP": {
-                    "name": "chat",
-                    "summary": "Alexaの中のAIアシスタント",
-                    "description": "AIモデルを使用して応答を生成するAlexaスキル",
+                    "name": "neo chat",
+                    "summary": "Alexa向け多言語AIアシスタント",
+                    "description": "Neo Chat に質問すると、設定可能なAIプロバイダーで簡潔に回答します。追加提案にも対応します。",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "アレクサ、neo chat を開いて",
+                        "アレクサ、neo chat に量子コンピューターとは何か聞いて"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "アシスタント", "チャット"]
                 },
                 "de-DE": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Alexa-Skill, der AI-Modelle verwendet, um Antworten zu generieren",
+                    "name": "neo chat",
+                    "summary": "Mehrsprachiger KI-Assistent für Alexa",
+                    "description": "Stelle Neo Chat Fragen und erhalte kurze Antworten über konfigurierbare KI-Anbieter mit optionalen Folgefragen.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, öffne neo chat",
+                        "Alexa, frage neo chat was ist künstliche Intelligenz"
                     ],
-                    "keywords": []
+                    "keywords": ["ki", "assistent", "chat"]
                 },
                 "it-IT": {
-                    "name": "chat",
-                    "summary": "AI Assistant in Alexa",
-                    "description": "Skill di Alexa che utilizza modelli di AI per generare risposte",
+                    "name": "neo chat",
+                    "summary": "Assistente IA multilingue per Alexa",
+                    "description": "Fai domande a Neo Chat e ricevi risposte concise con provider IA configurabili e suggerimenti opzionali.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, apri neo chat",
+                        "Alexa, chiedi a neo chat che cos'è il machine learning"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "assistente", "chat"]
                 },
                 "hi-IN": {
-                    "name": "chat",
+                    "name": "neo chat",
                     "summary": "Alexa में AI सहायक",
-                    "description": "Alexa कौशल जो AI मॉडल का उपयोग करके प्रतिक्रियाएं उत्पन्न करता है",
+                    "description": "Neo Chat से सवाल पूछें और कॉन्फ़िगर किए जा सकने वाले AI प्रदाताओं से संक्षिप्त उत्तर पाएं, वैकल्पिक सुझावों सहित।",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, neo chat खोलो",
+                        "Alexa, neo chat से पूछो आर्टिफिशियल इंटेलिजेंस क्या है"
                     ],
-                    "keywords": []
+                    "keywords": ["ai", "assistant", "chat"]
                 },
                 "pt-BR": {
-                    "name": "chat",
-                    "summary": "AI Assistant na Alexa",
-                    "description": "Skill Alexa que usa modelos de IA para gerar respostas",
+                    "name": "neo chat",
+                    "summary": "Assistente de IA multilíngue para Alexa",
+                    "description": "Faça perguntas ao Neo Chat e receba respostas curtas com provedores de IA configuráveis e sugestões opcionais.",
                     "examplePhrases": [
-                        "Alexa chat"
+                        "Alexa, abra neo chat",
+                        "Alexa, pergunte ao neo chat o que é inteligência artificial"
                     ],
-                    "keywords": []
+                    "keywords": ["ia", "assistente", "chat"]
                 }
             },
             "isAvailableWorldwide": true,
-            "testingInstructions": "Sample Testing Instructions",
+            "testingInstructions": "Enable skill testing in Development, then test both launch and one-shot utterances. Example one-shot: 'Alexa, ask neo chat what is photosynthesis'. Verify stop/cancel behavior and follow-up continuity.",
             "distributionCountries": []
         },
         "apis": {

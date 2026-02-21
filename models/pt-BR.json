@@ -4,7 +4,7 @@
             "invocationName": "neo chat",
             "intents": [
                 {
-                    "name": "GptQueryIntent",
+                    "name": "AIQueryIntent",
                     "slots": [
                         {
                             "name": "query",

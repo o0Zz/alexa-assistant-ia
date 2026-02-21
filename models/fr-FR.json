@@ -4,7 +4,7 @@
             "invocationName": "neo chat",
             "intents": [
                 {
-                    "name": "GptQueryIntent",
+                    "name": "AIQueryIntent",
                     "slots": [
                         {
                             "name": "query",
@@ -12,17 +12,17 @@
                         }
                     ],
                     "samples": [
-                        "quel est {query}",
-                        "quelle est {query}",
-                        "quels sont {query}",
-                        "quelles sont {query}",
-                        "qui est {query}",
-                        "qui était {query}",
-                        "qu'est-ce que {query}",
+                        "quel {query}",
+                        "quelle {query}",
+                        "quels {query}",
+                        "quelles {query}",
+                        "qui {query}",
+                        "qu'est-ce {query}",
+                        "qu'a fait {query}",
                         "comment {query}",
+                        "combien {query}",
                         "explique {query}",
-                        "parle-moi de {query}",
-                        "définis {query}",
+                        "parle-moi {query}",
                         "quand {query}",
                         "où {query}",
                         "pourquoi {query}"

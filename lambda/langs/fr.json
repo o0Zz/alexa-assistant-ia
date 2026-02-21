@@ -14,6 +14,7 @@
   "fallback_followup_1": "Dis-m'en plus",
   "fallback_followup_2": "Donne-moi un exemple",
   "followup_patterns": [
+    "^(quel|quelle|quels|quelles|qui|comment|quand|où|ou|pourquoi|qu'est-ce|qu'a fait|explique|parle-moi|parle moi)\\s",
     "^(quoi|comment|pourquoi|quand|où|ou|qui|quel|quelle|quels|quelles)\\s+(sur|est|sont|était|etaient|étaient|font|peux|peut|pourrais|pourrait|devrais|devrait|vas|va)\\s",
     "^(et|mais|donc|alors|aussi)\\s",
     "^(peux|peut|pourrais|pourrait|devrais|devrait|vas|va)\\s+(tu|vous|il|elle|ils|elles|on)\\s",

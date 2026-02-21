@@ -54,11 +54,11 @@ class LaunchRequestHandler(AbstractRequestHandler):
                 .response
         )
 
-class GptQueryIntentHandler(AbstractRequestHandler):
-    """Handler for Gpt Query Intent."""
+class AIQueryIntentHandler(AbstractRequestHandler):
+    """Handler for AI Query Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("GptQueryIntent")(handler_input)
+        return ask_utils.is_intent_name("AIQueryIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
@@ -276,7 +276,7 @@ class ClearContextIntentHandler(AbstractRequestHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(GptQueryIntentHandler())
+sb.add_request_handler(AIQueryIntentHandler())
 sb.add_request_handler(ClearContextIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_exception_handler(CatchAllExceptionHandler())
