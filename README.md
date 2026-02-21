@@ -1,20 +1,16 @@
-# Neo chat (Free Alexa AI assistant)
+# Alexa AI assistant
 
-Neo chat is a custom Alexa skill that routes user questions to a selectable LLM provider (GitHub Copilot, ChatGPT, Claude, MistralAI, ...) and returns an answer.
+Custom Alexa skill that routes user questions to a selectable LLM provider (GitHub Copilot, ChatGPT, Claude, MistralAI, ...) and returns an answer.
 
 You can invoke and ask in one sentence, for example:
 
-- "Alexa, ask Neo chat what is the age of George Clooney"
+- "Alexa, ask Neo chat how old is George Clooney"
 
 Or you can have a real discussion with it, for example:
 
 - "Alexa, launch Neo chat"
 - "What is the age of george clooney ?"
 - "How many movies did he make?"
-
-<div align="center">
-    <img src="images/test.png" />
-</div>
 
 ## Features
 
@@ -42,7 +38,7 @@ Language currently available (In `lambda/langs/`):
 
 ## Prerequisites
 
-- Amazon Developer account: https://developer.amazon.com/alexa/console/ask
+- Amazon Developer account: https://developer.amazon.com
 - One LLM provider account and API key/token:
     - GitHub token (with `models:read` permission)
     - OpenAI API key
@@ -72,16 +68,18 @@ Choose "Alexa-hosted (Python)" for the backend resources.
 
 ### 5. 
 Click on "Import Skill", paste the link of this repository (https://github.com/o0zz/alexa-assistant-ai.git) and click on "Import".
-![template](images/import_git_skill.png)
+![import skill](images/import_git_skill.png)
 
 ### 6. 
-In the "Build" section, navigate to the "JSON Editor" tab.
+In the "Build" tab, navigate to "Interaction Model" > "JSON Editor".
+
+![change name](images/intents_json_editor.png)
 
 ### 7. 
-Just change the "invocationName" to "ai assistant" or another preferred word for activation.
+Change the "invocationName" to "neo chat" or another preferred word for activation.
 
 ### 8. 
-In the "Code" section, navigate to the `lambda/config.py` file
+In the "Code" tab, navigate to the `lambda/config.py` file
 
 - Choose one `AGENT = ...`
 - Set its API token/key
@@ -99,19 +97,14 @@ ENABLE_FOLLOWUP_SUGGESTIONS = False
 ```
 
 ### 9. 
-Save and deploy. Go to "Test" section and enable "Skill testing" in "Development".
+Click Save and Click Deploy. 
+Go to "Test" section and enable "Skill testing" in "Development".
 
 ![development_enabled](images/development_enabled.png)
 
 ### 10. 
 You are now ready to use your Alexa in AI Assistant mode. You should see results like this:
 
-![test](images/test.png)
-
 ## Cost notice
 
 Using this skill can generate costs (AWS Lambda + model provider usage). Monitor your billing and quotas.
-
-## Inspiration
-
-Inspired by: https://github.com/k4l1sh/alexa-gpt
