@@ -4,169 +4,156 @@
             "invocationName": "neo chat",
             "intents": [
                 {
-                    "name": "AIQueryIntent",
+                    "name": "AIPersonIntent",
                     "slots": [
                         {
                             "name": "query",
-                            "type": "AMAZON.SearchQuery"
+                            "type": "AMAZON.Person"
                         }
                     ],
                     "samples": [
-                        "o que é {query}",
-                        "quem é {query}",
-                        "quem foi {query}",
-                        "o que são {query}",
-                        "qual é {query}",
-                        "como {query}",
-                        "explique {query}",
-                        "me fale sobre {query}",
-                        "defina {query}",
-                        "quando {query}",
-                        "onde {query}",
-                        "por que {query}",
-                        "como funciona {query}",
-                        "compare {query}"
+                        "{query}"
                     ]
                 },
                 {
                     "name": "AIWhatIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "o que é {query}",
-                        "tem {query}",
-                        "existe {query}"
+                        "o que é {searchquery}",
+                        "tem {searchquery}",
+                        "existe {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhoIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "quem é {query}",
-                        "quem foi {query}"
+                        "quem é {searchquery}",
+                        "quem foi {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhichIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "qual é {query}",
-                        "quais são {query}"
+                        "qual é {searchquery}",
+                        "quais são {searchquery}"
                     ]
                 },
                 {
                     "name": "AIHowIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "como {query}"
+                        "como {searchquery}"
                     ]
                 },
                 {
                     "name": "AIExplainIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "explique {query}",
-                        "pode explicar {query}"
+                        "explique {searchquery}",
+                        "pode explicar {searchquery}"
                     ]
                 },
                 {
                     "name": "AITellMeAboutIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "me fale sobre {query}",
-                        "me diga sobre {query}"
+                        "me fale sobre {searchquery}",
+                        "me diga sobre {searchquery}"
                     ]
                 },
                 {
                     "name": "AIDefineIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "defina {query}",
-                        "o que significa {query}"
+                        "defina {searchquery}",
+                        "o que significa {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhenIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "quando {query}"
+                        "quando {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhereIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "onde {query}"
+                        "onde {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhyIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "por que {query}",
-                        "por qual razão {query}"
+                        "por que {searchquery}",
+                        "por qual razão {searchquery}"
                     ]
                 },
                 {
                     "name": "AICompareIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "compare {query}",
-                        "qual é a diferença entre {query}"
+                        "compare {searchquery}",
+                        "qual é a diferença entre {searchquery}"
                     ]
                 },
                 {

@@ -27,6 +27,7 @@
   "response_error_prefix": "Erreur lors de la génération de la réponse : ",
   "clear_context_message": "J'ai effacé l'historique de notre conversation. De quoi voulez-vous parler ?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "qu'est-ce que",
     "AIWhoIntent": "qui",
     "AIWhichIntent": "quel",

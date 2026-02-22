@@ -26,6 +26,7 @@
   "response_error_prefix": "Errore durante la generazione della risposta: ",
   "clear_context_message": "Ho cancellato la cronologia della nostra conversazione. Di cosa vuoi parlare?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "cosa",
     "AIWhoIntent": "chi",
     "AIWhichIntent": "quale",

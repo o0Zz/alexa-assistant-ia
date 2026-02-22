@@ -26,6 +26,7 @@
   "response_error_prefix": "उत्तर बनाने में त्रुटि: ",
   "clear_context_message": "मैंने हमारी बातचीत का इतिहास साफ कर दिया है। आप किस बारे में बात करना चाहते हैं?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "क्या",
     "AIWhoIntent": "कौन",
     "AIWhichIntent": "कौन सा",

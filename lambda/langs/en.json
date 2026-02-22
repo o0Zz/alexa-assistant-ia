@@ -26,6 +26,7 @@
   "response_error_prefix": "Error generating response: ",
   "clear_context_message": "I've cleared our conversation history. What would you like to talk about?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "what",
     "AIWhoIntent": "who",
     "AIWhichIntent": "which",

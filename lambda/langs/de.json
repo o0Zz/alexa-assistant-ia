@@ -26,6 +26,7 @@
   "response_error_prefix": "Fehler bei der Antwortgenerierung: ",
   "clear_context_message": "Ich habe unseren Gesprächsverlauf gelöscht. Worüber möchtest du sprechen?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "was",
     "AIWhoIntent": "wer",
     "AIWhichIntent": "welche",

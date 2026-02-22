@@ -26,6 +26,7 @@
   "response_error_prefix": "Error al generar la respuesta: ",
   "clear_context_message": "He borrado el historial de nuestra conversación. ¿De qué te gustaría hablar?",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "qué",
     "AIWhoIntent": "quién",
     "AIWhichIntent": "cuál",

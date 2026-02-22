@@ -16,7 +16,7 @@ _LOGGER.setLevel(logging.INFO)
 
 LANGS_DIR = os.path.join(os.path.dirname(__file__), "langs")
 
-def load_language_file(language_code, default_code="en"):
+def load_language_file(language_code: str, default_code: str = "en") -> dict:
     file_path = os.path.join(LANGS_DIR, f"{language_code}.json")
     if not os.path.isfile(file_path):
         file_path = os.path.join(LANGS_DIR, f"{default_code}.json")
@@ -27,20 +27,17 @@ def load_language_file(language_code, default_code="en"):
         _LOGGER.warning(f"Unable to load language file '{file_path}': {error}")
         return {}
 
-def get_language_texts(handler_input):
+def get_language_texts(handler_input: HandlerInput) -> dict:
     locale = getattr(handler_input.request_envelope.request, "locale", "en-US") or "en-US"
     language_code = locale.split("-")[0].lower()
     return load_language_file(language_code, "en")
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
-
+    def can_handle(self, handler_input: HandlerInput) -> bool:
         return ask_utils.is_request_type("LaunchRequest")(handler_input)
 
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
+    def handle(self, handler_input: HandlerInput) -> Response:
         texts = get_language_texts(handler_input)
         speak_output = texts["launch_activated"]
 
@@ -56,8 +53,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
 class AIQueryIntentHandler(AbstractRequestHandler):
     """Handler for AI Query Intent."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
+    def can_handle(self, handler_input: HandlerInput) -> bool:
         intent_name = ""
         try:
             intent_name = handler_input.request_envelope.request.intent.name
@@ -65,7 +61,7 @@ class AIQueryIntentHandler(AbstractRequestHandler):
             return False
 
         supported_intents = {
-            "AIQueryIntent",
+            "AIPersonIntent",
             "AIHowIntent",
             "AIWhatIntent",
             "AIWhoIntent",
@@ -80,14 +76,16 @@ class AIQueryIntentHandler(AbstractRequestHandler):
         }
         return intent_name in supported_intents
 
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
+    def handle(self, handler_input: HandlerInput) -> Response:
         texts = get_language_texts(handler_input)
         intent = handler_input.request_envelope.request.intent
         slots = intent.slots or {}
-        query_slot = slots.get("query")
 
-        query = (query_slot.value or "").strip() if query_slot else ""
+        query = ""
+        if "query" in slots:
+            query = (slots.get("query").value or "").strip()
+        elif "searchquery" in slots:
+            query = (slots.get("searchquery").value or "").strip()
 
         prefix = texts["intent_prefixes"].get(intent.name)
         if prefix and query and not query.lower().startswith(prefix):
@@ -97,13 +95,8 @@ class AIQueryIntentHandler(AbstractRequestHandler):
 
         if not query:
             reprompt_text = texts["reprompt_default"]
-            return (
-                handler_input.response_builder
-                    .speak(reprompt_text)
-                    .ask(reprompt_text)
-                    .response
-            )
-       
+            return handler_input.response_builder.speak(reprompt_text).ask(reprompt_text).response
+        
         session_attr = handler_input.attributes_manager.session_attributes
         if "chat_history" not in session_attr:
             session_attr["chat_history"] = []
@@ -151,52 +144,33 @@ class AIQueryIntentHandler(AbstractRequestHandler):
         if followup_questions:
             reprompt_text = texts["reprompt_with_suggestions"]
         
-        return (
-            handler_input.response_builder
-                .speak(response)
-                .ask(reprompt_text)
-                .response
-        )
+        return handler_input.response_builder.speak(response).ask(reprompt_text).response
 
 class CatchAllExceptionHandler(AbstractExceptionHandler):
     """Generic error handling to capture any syntax or routing errors."""
-    def can_handle(self, handler_input, exception):
-        # type: (HandlerInput, Exception) -> bool
+    def can_handle(self, handler_input: HandlerInput, exception: Exception) -> bool:
         return True
 
-    def handle(self, handler_input, exception):
-        # type: (HandlerInput, Exception) -> Response
+    def handle(self, handler_input: HandlerInput, exception: Exception) -> Response:
         _LOGGER.error(exception, exc_info=True)
 
         texts = get_language_texts(handler_input)
         speak_output = texts["generic_error"]
 
-        return (
-            handler_input.response_builder
-                .speak(speak_output)
-                .ask(speak_output)
-                .response
-        )
-
+        return handler_input.response_builder.speak(speak_output).ask(speak_output).response
 class CancelOrStopIntentHandler(AbstractRequestHandler):
     """Single handler for Cancel and Stop Intent."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
+    def can_handle(self, handler_input: HandlerInput) -> bool:
         return (ask_utils.is_intent_name("AMAZON.CancelIntent")(handler_input) or
                 ask_utils.is_intent_name("AMAZON.StopIntent")(handler_input))
 
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
+    def handle(self, handler_input: HandlerInput) -> Response:
         texts = get_language_texts(handler_input)
         speak_output = texts["stop_message"]
 
-        return (
-            handler_input.response_builder
-                .speak(speak_output)
-                .response
-        )
+        return handler_input.response_builder.speak(speak_output).response
 
-def process_followup_question(question, last_context, texts):
+def process_followup_question(question: str, last_context: dict, texts: dict) -> tuple[str, bool]:
     """Processes a question to determine if it's a follow-up and enhances it with context if needed"""
     is_followup = False
     
@@ -210,13 +184,13 @@ def process_followup_question(question, last_context, texts):
     # The context will be handled in the generate_gpt_response function
     return question, is_followup
 
-def extract_context(question, response):
+def extract_context(question: str, response: str) -> dict:
     """Extracts the main context from a Q&A pair for future reference"""
     # This is a simple implementation that just returns the question and response
     # In a more advanced implementation, you could use NLP to extract key entities
     return {"question": question, "response": response}
 
-def generate_followup_questions(conversation_context, query, response, texts, count=2):
+def generate_followup_questions(conversation_context: list, query: str, response: str, texts: dict, count: int = 2) -> list[str]:
     """Generates concise follow-up questions based on the conversation context"""
     try:
         # Prepare a focused prompt for brief follow-ups
@@ -249,7 +223,7 @@ def generate_followup_questions(conversation_context, query, response, texts, co
         _LOGGER.error(f"Error in generate_followup_questions: {str(e)}")
         return [texts["fallback_followup_1"], texts["fallback_followup_2"]]
 
-def generate_gpt_response(chat_history, new_question, texts, is_followup=False):
+def generate_gpt_response(chat_history: list, new_question: str, texts: dict, is_followup: bool = False) -> tuple[str, list[str]]:
     """Generates a GPT response to a question with enhanced context handling"""
     # Create a more informative system message based on whether this is a follow-up
     system_message = texts["response_system_prompt"]
@@ -271,7 +245,7 @@ def generate_gpt_response(chat_history, new_question, texts, is_followup=False):
     try:
         response_text = AGENT.chat(messages, max_tokens=300, temperature=0.2, timeout=10)
 
-        followup_questions = []
+        followup_questions: list[str] = []
         if ENABLE_FOLLOWUP_SUGGESTIONS:
             try:
                 followup_questions = generate_followup_questions(
@@ -292,12 +266,10 @@ def generate_gpt_response(chat_history, new_question, texts, is_followup=False):
 
 class ClearContextIntentHandler(AbstractRequestHandler):
     """Handler for clearing conversation context."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
+    def can_handle(self, handler_input: HandlerInput) -> bool:
         return ask_utils.is_intent_name("ClearContextIntent")(handler_input)
 
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
+    def handle(self, handler_input: HandlerInput) -> Response:
         session_attr = handler_input.attributes_manager.session_attributes
         session_attr["chat_history"] = []
         session_attr["last_context"] = None

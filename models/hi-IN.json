@@ -4,171 +4,158 @@
             "invocationName": "neo chat",
             "intents": [
                 {
-                    "name": "AIQueryIntent",
+                    "name": "AIPersonIntent",
                     "slots": [
                         {
                             "name": "query",
-                            "type": "AMAZON.SearchQuery"
+                            "type": "AMAZON.Person"
                         }
                     ],
                     "samples": [
-                        "क्या है {query}",
-                        "कौन है {query}",
-                        "कौन था {query}",
-                        "क्या हैं {query}",
-                        "कैसे {query}",
-                        "समझाओ {query}",
-                        "{query} के बारे में बताओ",
-                        "परिभाषित करो {query}",
-                        "कब {query}",
-                        "कहाँ {query}",
-                        "क्यों {query}",
-                        "कैसे काम करता है {query}",
-                        "तुलना करो {query}",
-                        "विस्तार से बताओ {query}"
+                        "{query}"
                     ]
                 },
                 {
                     "name": "AIWhatIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "क्या है {query}",
-                        "क्या {query} है"
+                        "क्या है {searchquery}",
+                        "क्या {searchquery} है"
                     ]
                 },
                 {
                     "name": "AIWhoIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "कौन है {query}",
-                        "कौन था {query}"
+                        "कौन है {searchquery}",
+                        "कौन था {searchquery}"
                     ]
                 },
                 {
                     "name": "AIWhichIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "कौन सा {query}",
-                        "कौन सा है {query}"
+                        "कौन सा {searchquery}",
+                        "कौन सा है {searchquery}"
                     ]
                 },
                 {
                     "name": "AIHowIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "कैसे {query}",
-                        "कैसे काम करता है {query}"
+                        "कैसे {searchquery}",
+                        "कैसे काम करता है {searchquery}"
                     ]
                 },
                 {
                     "name": "AIExplainIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "समझाओ {query}",
-                        "समझाइए {query}"
+                        "समझाओ {searchquery}",
+                        "समझाइए {searchquery}"
                     ]
                 },
                 {
                     "name": "AITellMeAboutIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} के बारे में बताओ",
-                        "{query} के बारे में और बताओ"
+                        "{searchquery} के बारे में बताओ",
+                        "{searchquery} के बारे में और बताओ"
                     ]
                 },
                 {
                     "name": "AIDefineIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "परिभाषित करो {query}",
-                        "{query} का मतलब क्या है"
+                        "परिभाषित करो {searchquery}",
+                        "{searchquery} का मतलब क्या है"
                     ]
                 },
                 {
                     "name": "AIWhenIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "कब {query}",
-                        "{query} कब है"
+                        "कब {searchquery}",
+                        "{searchquery} कब है"
                     ]
                 },
                 {
                     "name": "AIWhereIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "कहाँ {query}",
-                        "{query} कहाँ है"
+                        "कहाँ {searchquery}",
+                        "{searchquery} कहाँ है"
                     ]
                 },
                 {
                     "name": "AIWhyIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "क्यों {query}",
-                        "{query} क्यों है"
+                        "क्यों {searchquery}",
+                        "{searchquery} क्यों है"
                     ]
                 },
                 {
                     "name": "AICompareIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "तुलना करो {query}",
-                        "{query} में क्या अंतर है"
+                        "तुलना करो {searchquery}",
+                        "{searchquery} में क्या अंतर है"
                     ]
                 },
                 {

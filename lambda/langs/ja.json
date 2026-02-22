@@ -26,6 +26,7 @@
   "response_error_prefix": "回答生成エラー: ",
   "clear_context_message": "会話履歴を消去しました。何について話しますか？",
   "intent_prefixes": {
+    "AIPersonIntent": "",
     "AIWhatIntent": "何",
     "AIWhoIntent": "誰",
     "AIWhichIntent": "どれ",

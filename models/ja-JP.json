@@ -4,171 +4,158 @@
             "invocationName": "neo chat",
             "intents": [
                 {
-                    "name": "AIQueryIntent",
+                    "name": "AIPersonIntent",
                     "slots": [
                         {
                             "name": "query",
-                            "type": "AMAZON.SearchQuery"
+                            "type": "AMAZON.Person"
                         }
                     ],
                     "samples": [
-                        "{query} とは",
-                        "{query} は何",
-                        "{query} は誰",
-                        "{query} はいつ",
-                        "{query} はどこ",
-                        "{query} はなぜ",
-                        "{query} はどうして",
-                        "{query} を説明して",
-                        "{query} を教えて",
-                        "{query} について教えて",
-                        "{query} の意味は",
-                        "{query} はどうやって",
-                        "{query} の使い方は",
-                        "{query} を比較して"
+                        "{query}"
                     ]
                 },
                 {
                     "name": "AIWhatIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} は何",
-                        "{query} はありますか"
+                        "{searchquery} は何",
+                        "{searchquery} はありますか"
                     ]
                 },
                 {
                     "name": "AIWhoIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} は誰",
-                        "{query} は誰ですか"
+                        "{searchquery} は誰",
+                        "{searchquery} は誰ですか"
                     ]
                 },
                 {
                     "name": "AIWhichIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} はどれ",
-                        "{query} はどれですか"
+                        "{searchquery} はどれ",
+                        "{searchquery} はどれですか"
                     ]
                 },
                 {
                     "name": "AIHowIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} はどうやって",
-                        "{query} はどう動く"
+                        "{searchquery} はどうやって",
+                        "{searchquery} はどう動く"
                     ]
                 },
                 {
                     "name": "AIExplainIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} を説明して",
-                        "{query} を詳しく説明して"
+                        "{searchquery} を説明して",
+                        "{searchquery} を詳しく説明して"
                     ]
                 },
                 {
                     "name": "AITellMeAboutIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} について教えて",
-                        "{query} についてもっと教えて"
+                        "{searchquery} について教えて",
+                        "{searchquery} についてもっと教えて"
                     ]
                 },
                 {
                     "name": "AIDefineIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} の意味は",
-                        "{query} とはどういう意味"
+                        "{searchquery} の意味は",
+                        "{searchquery} とはどういう意味"
                     ]
                 },
                 {
                     "name": "AIWhenIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} はいつ",
-                        "{query} はいつですか"
+                        "{searchquery} はいつ",
+                        "{searchquery} はいつですか"
                     ]
                 },
                 {
                     "name": "AIWhereIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} はどこ",
-                        "{query} はどこですか"
+                        "{searchquery} はどこ",
+                        "{searchquery} はどこですか"
                     ]
                 },
                 {
                     "name": "AIWhyIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} はなぜ",
-                        "{query} はなぜですか"
+                        "{searchquery} はなぜ",
+                        "{searchquery} はなぜですか"
                     ]
                 },
                 {
                     "name": "AICompareIntent",
                     "slots": [
                         {
-                            "name": "query",
+                            "name": "searchquery",
                             "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query} を比較して",
-                        "{query} の違いを教えて"
+                        "{searchquery} を比較して",
+                        "{searchquery} の違いを教えて"
                     ]
                 },
                 {
