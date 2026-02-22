@@ -8,6 +8,7 @@ import logging
 import json
 import re
 import os
+from typing import List, Tuple
 from config import ENABLE_FOLLOWUP_SUGGESTIONS
 from config import AGENT
 
@@ -170,7 +171,7 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
 
         return handler_input.response_builder.speak(speak_output).response
 
-def process_followup_question(question: str, last_context: dict, texts: dict) -> tuple[str, bool]:
+def process_followup_question(question: str, last_context: dict, texts: dict) -> Tuple[str, bool]:
     """Processes a question to determine if it's a follow-up and enhances it with context if needed"""
     is_followup = False
     
@@ -190,7 +191,7 @@ def extract_context(question: str, response: str) -> dict:
     # In a more advanced implementation, you could use NLP to extract key entities
     return {"question": question, "response": response}
 
-def generate_followup_questions(conversation_context: list, query: str, response: str, texts: dict, count: int = 2) -> list[str]:
+def generate_followup_questions(conversation_context: list, query: str, response: str, texts: dict, count: int = 2) -> List[str]:
     """Generates concise follow-up questions based on the conversation context"""
     try:
         # Prepare a focused prompt for brief follow-ups
@@ -223,7 +224,7 @@ def generate_followup_questions(conversation_context: list, query: str, response
         _LOGGER.error(f"Error in generate_followup_questions: {str(e)}")
         return [texts["fallback_followup_1"], texts["fallback_followup_2"]]
 
-def generate_gpt_response(chat_history: list, new_question: str, texts: dict, is_followup: bool = False) -> tuple[str, list[str]]:
+def generate_gpt_response(chat_history: list, new_question: str, texts: dict, is_followup: bool = False) -> Tuple[str, List[str]]:
     """Generates a GPT response to a question with enhanced context handling"""
     # Create a more informative system message based on whether this is a follow-up
     system_message = texts["response_system_prompt"]
@@ -245,7 +246,7 @@ def generate_gpt_response(chat_history: list, new_question: str, texts: dict, is
     try:
         response_text = AGENT.chat(messages, max_tokens=300, temperature=0.2, timeout=10)
 
-        followup_questions: list[str] = []
+        followup_questions: List[str] = []
         if ENABLE_FOLLOWUP_SUGGESTIONS:
             try:
                 followup_questions = generate_followup_questions(
